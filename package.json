@@ -1,5 +1,5 @@
 {
-  "name": "wg-api-lib",
+  "name": "@muffinking-jpeg/wg-api-lib",
   "description": "Lib for optaining player stistics in games made by Wargaming.net",
   "version": "1.0.0",
   "main": "lib/index.js",
@@ -29,10 +29,7 @@
   "author": "MuffinKing-jpeg",
   "license": "ISC",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MuffinKing-jpeg/wg-api-lib.git"
-  },
+  "repository": "https://github.com/MuffinKing-jpeg/wg-api-lib.git",
   "devDependencies": {
     "@types/jest": "^29.0.3",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
@@ -49,5 +46,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
