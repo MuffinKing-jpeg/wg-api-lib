@@ -46,3 +46,4 @@ Thumbs.db
 *.cache
 lib/**/*
 lib/
+.env

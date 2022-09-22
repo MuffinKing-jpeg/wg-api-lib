@@ -4,4 +4,5 @@ export class wgApi {
   constructor(key: string) {
     this.apiKey = key;
   }
+
 }
