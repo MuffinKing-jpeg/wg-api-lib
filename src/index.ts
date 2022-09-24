@@ -1,38 +1,62 @@
-import { REGIONS } from './conf/regions.conf';
-import { Conf } from './interfaces/conf.interface';
-import { CreateLinkInterface } from './interfaces/createLink.interface';
+import { Fetcher } from './fetcher';
+import { GetPlayerAchievementsInterface } from './interfaces/getPlayerAchievements.interface';
+import { GetPlayerDataInterface } from './interfaces/getPlayerData.interface';
+import { SerachPlayerInterface } from './interfaces/searchPlayer.interface';
+import { Linker } from './linkMaker';
 
 export class wgApi {
   private apiKey!: string;
+  private linker = new Linker();
+  private getData = new Fetcher();
 
-  constructor(key: string) {
-    this.apiKey = key;
-    this.createLink({
-      game: 'wotblitz',
-      region: 'eu',
+  constructor(key?: string) {
+    if (key) {
+      this.apiKey = key
+    } else {
+      throw 'No api key specified'
+    }
+  }
+
+  public getPlayerData(p: GetPlayerDataInterface): Promise<any> {
+    const url = this.linker.createLink({
+      game: p.game,
+      region: p.region,
+      type: 'player-data'
+    }, `${p.id}`, this.apiKey )
+
+    return new Promise((resolve) => {
+      this.getData
+        .getRequest(url)
+        .subscribe( data => {resolve(data)})
+    })
+  }
+
+  public searchPlayer(p: SerachPlayerInterface): Promise<any> {
+    const url = this.linker.createLink({
+      game: p.game,
+      region: p.region,
       type: 'player-search'
-    });
+    }, p.query, this.apiKey)
+
+    return new Promise((resolve) => {
+      this.getData
+        .getRequest(url)
+        .subscribe( data => {resolve(data)})
+    })
   }
 
-  private getApiType(p: CreateLinkInterface['type']): Conf['field'] {
-    switch (p) {
-      case 'player-search':
-        return 'search'
-      case 'player-data':
-      case 'player-achievement':
-        return 'account_id'
-    }
-  }
+  public getPlayerAchievements(p: GetPlayerAchievementsInterface): Promise<any> {
+    const url = this.linker.createLink({
+      game: p.game,
+      region: p.region,
+      type: 'player-achievement'
+    }, `${p.id}`, this.apiKey)
 
-  private createLink(p: CreateLinkInterface): any {
-    const conf: Conf = {
-      region: REGIONS[p.region],
-      field: this.getApiType(p.type)
-    }
-    console.log(conf);
-
-    // let link: any = new URL();
-    // return link;
+    return new Promise((resolve) => {
+      this.getData
+        .getRequest(url)
+        .subscribe( data => {resolve(data)})
+    })
   }
 
 }

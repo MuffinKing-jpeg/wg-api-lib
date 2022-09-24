@@ -1,8 +1,7 @@
 import { CreateLinkInterface } from './createLink.interface'
 
-export interface Conf {
+export interface SerachPlayerInterface {
+  query: string
   region: CreateLinkInterface['region']
-  field: 'account_id' | 'search'
   game: CreateLinkInterface['game']
-  path: `${string}/${string}/${string}`
 }

@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": true,
   "compilerOptions": {
@@ -15,11 +14,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
-    "module": "es2020",
-    "lib": ["es2020"],
-    "esModuleInterop": true
+    "target": "ES2016",
+    "module": "ES6",
+    "lib": ["ES2016"]
   },
+
+  "types": ["node", ""],
+  "typeRoots": ["../node_modules/@types", "../node_modules/rxjs-http-client/"],
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
