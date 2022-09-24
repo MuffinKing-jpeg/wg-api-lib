@@ -4,8 +4,8 @@
 
 This is NodeJS package for easy work with Wargaming.net API.
 In current version supports only World of Tanks and World of Tanks Blitz.
-> **IMPORTANT!**  
-> Starting from october 14th 2022 support for .ru (CIS earlier) will be deprecated.  
+> IMPORTANT!
+> Starting from october 14th support for .ru (CIS earlier) will be deprecated.  
 > This package do not support Lesta Games API (and probably will not)
 
 ## Installing
@@ -20,7 +20,7 @@ npm i @muffinking-jpeg/wg-api-lib
 
 ### Initialization
 
-To start using package import this as ES6 module (No support for CommonJS. Let's move forward) and initialize object with your WG api key.
+To start using package import this as ES6 module (No support for CommonJS) and initialize object with your WG api key.
 
 ```js
 import { wgApi } from '@muffinking-jpeg/wg-api-lib';
@@ -49,7 +49,7 @@ import { wgApi } from '@muffinking-jpeg/wg-api-lib';
 
 dotenv.config();
 
-const apiKey = process.env['WG_API_KEY']
+const apiKey = process.env[WG_API_KEY]
 const api = new wgApi(apiKey)
 //I'm too lazy to make check fo undef, so... be careful 
 ...
@@ -62,7 +62,7 @@ const api = new wgApi(apiKey)
 >For searching players by name.
 
 | Params   |              Types              |        Meaning         |
-|--------- |-------------------------------- |------------------------|
+|--------- |:------------------------------: |:---------------------: |
 | game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
 | query:   |             string              | Player's name          |
@@ -72,7 +72,7 @@ const api = new wgApi(apiKey)
 >For loading player's statistics.
 
 | Params   |              Types              |        Meaning         |
-|--------- |-------------------------------- |:---------------------- |
+|--------- |:------------------------------: |:---------------------: |
 | game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
 | id:      |             number              | Player's id            |
@@ -82,7 +82,7 @@ const api = new wgApi(apiKey)
 >For loading player's achievements.
 
 | Params   |              Types              |        Meaning         |
-|--------- |-------------------------------- |----------------------- |
+|--------- |:------------------------------: |:---------------------: |
 | game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
 | id:      |             number              | Player's id            |
