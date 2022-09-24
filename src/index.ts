@@ -1,8 +1,8 @@
-import { Fetcher } from './fetcher';
+import { Fetcher } from './fetcher.js';
 import { GetPlayerAchievementsInterface } from './interfaces/getPlayerAchievements.interface';
 import { GetPlayerDataInterface } from './interfaces/getPlayerData.interface';
 import { SerachPlayerInterface } from './interfaces/searchPlayer.interface';
-import { Linker } from './linkMaker';
+import { Linker } from './linkMaker.js';
 
 export class wgApi {
   private apiKey!: string;

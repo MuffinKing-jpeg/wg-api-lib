@@ -1,6 +1,6 @@
 
 import { REGIONS } from './conf/regions.conf';
-import { Conf } from './interfaces/conf.interface';
+import { Conf } from './interfaces/conf.interface.js';
 import { CreateLinkInterface } from './interfaces/createLink.interface';
 import { GetApiPathInterface } from './interfaces/getApiPath.interface';
 
