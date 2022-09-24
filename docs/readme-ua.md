@@ -4,7 +4,7 @@
 
 [**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
 
-## Description
+## Опис
 
 Пакет для NodeJS який спрощує роботу з API від Wargaming.net.
 Поки що є підтримка лиже для World of Tanks and World of Tanks Blitz.
