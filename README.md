@@ -1,5 +1,9 @@
 # WG-API-Lib
 
+Доступно на:
+
+[**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
+
 ## Description
 
 This is NodeJS package for easy work with Wargaming.net API.
@@ -132,7 +136,7 @@ api.getPlayerAchievements({
 - Add WOWS and WOT Console support.
 - Implementing every feature from [Wargaming API reference](https://developers.wargaming.net/reference/all)
 - Better readme
-- Translating readme to more languages
+- ~~Translating readme to more languages~~
 
 ## NEVER PLANED
 

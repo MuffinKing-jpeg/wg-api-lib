@@ -1,26 +1,30 @@
 # WG-API-Lib
 
-## Description
+Доступно на:
 
-This is NodeJS package for easy work with Wargaming.net API.
-In current version supports only World of Tanks and World of Tanks Blitz.
-> IMPORTANT!
-> Starting from october 14th support for .ru (CIS earlier) will be deprecated.  
-> This package do not support Lesta Games API (and probably will not)
+[**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
 
-## Installing
+## Описание
 
-To install package type in console:
+Этот модуль для NodeJS создан что бы упростить работу API Wargaming.net.
+На текущий момент библиотека поддерживает только World Of Tanks и World of Tanks Blitz
+> **ВАЖНО!**
+> Начиная с 14-го октября 2022 года работа .ru (раньше СНГ) региона будет остановлена.  
+> Этот пакет не поддерживает Lesta Games API (и скорей всего не будет поддерживать его никогда)
+
+## Установка
+
+Для установки нужно написать в консоль:
 
 ```sh
 npm i @muffinking-jpeg/wg-api-lib
 ```
 
-## Usage
+## Использование
 
-### Initialization
+### Инициализация
 
-To start using package import this as ES6 module (No support for CommonJS) and initialize object with your WG api key.
+Что бы начать использовать модуль нужно подключить по синтаксису ES6 (Нет поддержки для CommonJS. Давайте развиваться.) с использованием вашего ключа API.
 
 ```js
 import { wgApi } from '@muffinking-jpeg/wg-api-lib';
@@ -30,9 +34,9 @@ import { wgApi } from '@muffinking-jpeg/wg-api-lib';
 const api = new wgApi('Put your WG key here')
 ```
 
-Best practice is to use environment variables or `.env` file to store api keys
+Хорошем тоном считается использование переменных среды или файла `.env` для хранения ключей ваших API
 
-`.env` file:
+Файл `.env`:
 
 ```js
 ...
@@ -40,7 +44,7 @@ WG_API_KEY = "YourApiKey"
 ...
 ```
 
-Your code:
+Ваш код:
 
 ```js
 import * as dotenv from 'dotenv';
@@ -49,47 +53,48 @@ import { wgApi } from '@muffinking-jpeg/wg-api-lib';
 
 dotenv.config();
 
-const apiKey = process.env[WG_API_KEY]
+const apiKey = process.env['WG_API_KEY']
 const api = new wgApi(apiKey)
-//I'm too lazy to make check fo undef, so... be careful 
+//Я слишком ленивый что бы сделать проверку на undefined ...
+//Берегите себя
 ...
 ```
 
-### Methods
+### Методы
 
 #### .searchPlayer(paramsObject)
 
->For searching players by name.
+>Для поиска игрока мо нику.
 
-| Params   |              Types              |        Meaning         |
+| Параметры|              Типы данных        |        Значение        |
 |--------- |:------------------------------: |:---------------------: |
-| game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
-| query:   |             string              | Player's name          |
+| game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
+| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| query:   |             string              | Ник игрока             |
 
 #### .getPlayerData(paramsObject)
 
->For loading player's statistics.
+>Для загрузки данных игрока.
 
-| Params   |              Types              |        Meaning         |
+| Параметры|              Типы данных        |        Значение        |
 |--------- |:------------------------------: |:---------------------: |
-| game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
-| id:      |             number              | Player's id            |
+| game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
+| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| id:      |             number              | Id игрока              |
 
 #### .getPlayerAchievements(paramsObject)
 
->For loading player's achievements.
+>Для загрузки достижений игрока.
 
-| Params   |              Types              |        Meaning         |
+| Параметры|              Типы данных        |        Значение        |
 |--------- |:------------------------------: |:---------------------: |
-| game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
-| id:      |             number              | Player's id            |
+| game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
+| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| id:      |             number              | Id игрока               |
 
-### Examples
+### Примеры
 
-#### How to get players list
+#### Как найти игрока по нику
 
 ```js
 api.searchPlayer({
@@ -97,7 +102,7 @@ api.searchPlayer({
     query: 'Holly_Carbonara',
     region: 'eu'
   }).then(res => {
-    //Your response handler here
+    //Обработчик кода здесь
   })
 ```
 
@@ -109,7 +114,7 @@ api.getPlayerData({
     id: 594863503,
     region: 'eu'
   }).then(res => {
-    //Your response handler here
+    //Обработчик кода здесь
   })
 ```
 
@@ -121,20 +126,20 @@ api.getPlayerAchievements({
     id: 594863503,
     region: 'eu'
   }).then(res => {
-    //Your response handler here
+    //Обработчик кода здесь
   })
 ```
 
 ## TODO
 
-- Check for undef and\or incorrect API key.
-- Expand methods availability for tanks\ships.
-- Add WOWS and WOT Console support.
-- Implementing every feature from [Wargaming API reference](https://developers.wargaming.net/reference/all)
-- Better readme
-- Translating readme to more languages
+- Сделать проверку ключа API на undefined.
+- Расширить методы для загрузки статистики по технике\кораблях.
+- Добавить поддержку для WOWS и WOT Console.
+- Реализовать весь функционал с [справочника Wargaming API](https://developers.wargaming.net/reference/all)
+- Улучшить readme
+- ~~Перевести readme на несколько языков~~
 
-## NEVER PLANED
+## НИКОГДА НЕ БУДЕТ РЕАЛИЗОВАНО
 
-- Support for Lesta Games API
-- Support for wargaming authentication (Maybe it will be another module. This feature requires http server)
+- Поддержка Lesta Games API
+- Поддержка для авторизации Wargaming (Возможно будет сделано отдельным модулем. Этот функционал требует HTTP сервер)

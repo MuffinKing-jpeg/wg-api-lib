@@ -1,10 +1,14 @@
 # WG-API-Lib
 
+Доступно на:
+
+[**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
+
 ## Description
 
 This is NodeJS package for easy work with Wargaming.net API.
 In current version supports only World of Tanks and World of Tanks Blitz.
-> IMPORTANT!  
+> **IMPORTANT!**  
 > Starting from october 14th 2022 support for .ru (CIS earlier) will be deprecated.  
 > This package do not support Lesta Games API (and probably will not)
 
@@ -49,7 +53,7 @@ import { wgApi } from '@muffinking-jpeg/wg-api-lib';
 
 dotenv.config();
 
-const apiKey = process.env[WG_API_KEY]
+const apiKey = process.env['WG_API_KEY']
 const api = new wgApi(apiKey)
 //I'm too lazy to make check fo undef, so... be careful 
 ...
@@ -62,7 +66,7 @@ const api = new wgApi(apiKey)
 >For searching players by name.
 
 | Params   |              Types              |        Meaning         |
-|--------- |-------------------------------- |----------------------- |
+|--------- |-------------------------------- |------------------------|
 | game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
 | query:   |             string              | Player's name          |
@@ -72,7 +76,7 @@ const api = new wgApi(apiKey)
 >For loading player's statistics.
 
 | Params   |              Types              |        Meaning         |
-|--------- |-------------------------------- |----------------------- |
+|--------- |-------------------------------- |:---------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Choosing the game      |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Choose region of game  |
 | id:      |             number              | Player's id            |
@@ -132,7 +136,7 @@ api.getPlayerAchievements({
 - Add WOWS and WOT Console support.
 - Implementing every feature from [Wargaming API reference](https://developers.wargaming.net/reference/all)
 - Better readme
-- Translating readme to more languages
+- ~~Translating readme to more languages~~
 
 ## NEVER PLANED
 

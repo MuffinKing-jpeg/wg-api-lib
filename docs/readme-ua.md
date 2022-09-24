@@ -1,5 +1,9 @@
 # WG-API-Lib
 
+Доступно на:
+
+[**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
+
 ## Description
 
 Пакет для NodeJS який спрощує роботу з API від Wargaming.net.
@@ -62,7 +66,7 @@ const api = new wgApi(apiKey)
 
 >Для пошуку гравця по імені.
 
-| Params   |              Types              |        Meaning         |
+| Параметри|            тип даних            |        Значення        |
 |--------- |:------------------------------: |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Вибір гри              |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Вибір регіону          |
@@ -72,7 +76,7 @@ const api = new wgApi(apiKey)
 
 >Для завантаження статистики гравця.
 
-| Params   |              Types              |        Meaning         |
+| Параметри|            тип даних            |        Значення        |
 |--------- |:------------------------------: |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Вибір гри              |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Вибір регіону          |
@@ -82,7 +86,7 @@ const api = new wgApi(apiKey)
 
 >Для завантаження досягнень гравця.
 
-| Params   |              Types              |        Meaning         |
+| Параметри|            тип даних            |        Значення        |
 |--------- |-------------------------------- |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Вибір гри              |
 | region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Вибір регіону          |
@@ -138,4 +142,4 @@ api.getPlayerAchievements({
 ## НІКОЛИ НЕ БУДЕ РЕАЛІЗОВАНО
 
 - Підтримка Lesta Games API
-- Підтримка авторизації Wargaming (Можливо буде зроблено як окремий модуль. Ця функція потребує http сервер)
+- Підтримка авторизації Wargaming (Можливо буде зроблено як окремий модуль. Ця функція потребує HTTP сервер)
