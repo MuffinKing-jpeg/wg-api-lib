@@ -1,7 +1,7 @@
 import { Fetcher } from './fetcher.js';
 import { GetPlayerAchievementsInterface } from './interfaces/getPlayerAchievements.interface';
 import { GetPlayerDataInterface } from './interfaces/getPlayerData.interface';
-import { SerachPlayerInterface } from './interfaces/searchPlayer.interface';
+import { SearchPlayerInterface } from './interfaces/searchPlayer.interface';
 import { Linker } from './linkMaker.js';
 
 export class wgApi {
@@ -31,7 +31,7 @@ export class wgApi {
     })
   }
 
-  public searchPlayer(p: SerachPlayerInterface): Promise<any> {
+  public searchPlayer(p: SearchPlayerInterface): Promise<any> {
     const url = this.linker.createLink({
       game: p.game,
       region: p.region,
