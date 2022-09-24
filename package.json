@@ -1,7 +1,7 @@
 {
   "name": "@muffinking-jpeg/wg-api-lib",
   "description": "Lib for obtaining player statistics in games made by Wargaming.net",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
