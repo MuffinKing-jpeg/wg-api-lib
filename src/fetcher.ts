@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { interval, Observable, throttle } from 'rxjs';
 
 export class Fetcher {
   private http = axios
@@ -7,16 +6,13 @@ export class Fetcher {
   constructor() {
   }
 
-  getRequest(url: string) {
-    return new Observable(subscriber => {
+  getRequest(url: string): Promise<any> {
+    return new Promise(resolve => {
       this.http.get(url)
         .then(res => res.data)
         .then(data => {
-          console.log(url);
-
-          subscriber.next(data)
+          resolve(data)
         })
     })
-      .pipe(throttle(() => interval(1000)))
   }
 }

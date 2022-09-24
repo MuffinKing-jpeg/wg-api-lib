@@ -27,7 +27,7 @@ export class wgApi {
     return new Promise((resolve) => {
       this.getData
         .getRequest(url)
-        .subscribe( data => {resolve(data)})
+        .then( data => {resolve(data)})
     })
   }
 
@@ -41,7 +41,7 @@ export class wgApi {
     return new Promise((resolve) => {
       this.getData
         .getRequest(url)
-        .subscribe( data => {resolve(data)})
+        .then( data => {resolve(data)})
     })
   }
 
@@ -55,8 +55,10 @@ export class wgApi {
     return new Promise((resolve) => {
       this.getData
         .getRequest(url)
-        .subscribe( data => {resolve(data)})
+        .then( data => {resolve(data)})
     })
   }
 
 }
+
+export default wgApi;
