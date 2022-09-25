@@ -12,6 +12,12 @@ test('Set API key', () => {
   expect(api.apiKey).toBe(apiKey);
 });
 
+test('Bad api key', () => {
+  expect(() => { const badApi = new wgApi(''); badApi }).toThrow();
+  expect(() => { const badApi = new wgApi('остолопок'); badApi }).toThrow();
+  expect(() => { const badApi = new wgApi('c226ff9f0e61fbcb434e03c238f'); badApi }).toThrow();
+});
+
 test('Create link', () => {
   const query = 'MuffinKing'
   const paramsEU = {

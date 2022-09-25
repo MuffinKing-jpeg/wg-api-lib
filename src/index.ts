@@ -10,10 +10,12 @@ export class wgApi {
   private getData = new Fetcher();
 
   constructor(key?: string) {
-    if (key) {
-      this.apiKey = key
+    const regExp = /[A-Za-z0-9]/g
+
+    if (key && key.length === 32 && key.match(regExp)?.length === key.length) {
+      this.apiKey = key.toLowerCase()
     } else {
-      throw 'No api key specified'
+      throw 'Incorrect api key'
     }
   }
 
