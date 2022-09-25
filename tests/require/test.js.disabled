@@ -1,9 +1,0 @@
-var wgApi = require('../lib/index')
-
-
-const placeholder = 'test12345'
-const api = new wgApi.wgApi(placeholder);
-
-test('Test for Requre compatibility', () => {
-  expect(api.apiKey).toBe(placeholder);
-})
