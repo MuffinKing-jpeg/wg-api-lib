@@ -1,6 +1,6 @@
 # WG-API-Lib
 
-Доступно на:
+Available on:
 
 [**EN**](https://muffinking-jpeg.github.io/wg-api-lib/) | [**UA**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ua) | [**RU**](https://muffinking-jpeg.github.io/wg-api-lib/readme-ru)
 
