@@ -7,7 +7,7 @@ import { Linker } from './linkMaker.js';
 export class wgApi {
   private apiKey!: string;
   private linker = new Linker();
-  public getData = new Fetcher();
+  private getData = new Fetcher();
 
   constructor(key?: string) {
     if (key) {

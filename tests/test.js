@@ -77,3 +77,4 @@ test('Get Achievements', () => {
   })
 })
 
+afterAll(() => clearInterval(api.getData.emitterTimer))
