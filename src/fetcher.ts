@@ -9,7 +9,7 @@ export class Fetcher {
   private http = axios;
   private fetchEmitter = new FetchEvent();
   private queue: string[] = [];
-  private emitterTimer = setInterval(this.emitter.bind(this), 150);
+  public emitterTimer = setInterval(this.emitter.bind(this), 150);
 
   constructor() {
   }

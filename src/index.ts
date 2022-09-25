@@ -6,14 +6,16 @@ import { Linker } from './linkMaker.js';
 
 export class wgApi {
   private apiKey!: string;
-  private linker = new Linker();
-  private getData = new Fetcher();
+  private linker ;
+  private getData;
 
   constructor(key?: string) {
     const regExp = /[A-Za-z0-9]/g
 
     if (key && key.length === 32 && key.match(regExp)?.length === key.length) {
       this.apiKey = key.toLowerCase()
+      this.getData = new Fetcher();
+      this.linker = new Linker()
     } else {
       throw 'Incorrect api key'
     }
