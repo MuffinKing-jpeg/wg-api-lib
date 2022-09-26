@@ -64,5 +64,3 @@ export class wgApi {
   }
 
 }
-
-export default wgApi;
