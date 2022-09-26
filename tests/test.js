@@ -3,8 +3,8 @@ import { wgApi } from '../lib/index';
 
 dotenv.config();
 
-const apiKey = process.env.WG_API_KEY
-console.log(process.env.WG_API_KEY);
+const apiKey = process.env['WG_API_KEY']
+console.log(process.env['WG_API_KEY']);
 
 const api = new wgApi(apiKey)
 
@@ -15,7 +15,7 @@ test('Set API key', () => {
 test('Bad api key', () => {
   expect(() => { const badApi = new wgApi(''); badApi }).toThrow();
   expect(() => {
-    const badApi = new wgApi('остолопок'); badApi
+    const badApi = new wgApi('осколок'); badApi
   }).toThrow();
   expect(() => { const badApi = new wgApi('c226ff9f0e61fbcb434e03c238f'); badApi }).toThrow();
 });
@@ -85,4 +85,4 @@ test('Get Achievements', () => {
   })
 })
 
-afterAll(() => clearInterval(api.getData.emitterTimer))
+// afterAll(() => clearInterval(api.getData.emitterTimer))
