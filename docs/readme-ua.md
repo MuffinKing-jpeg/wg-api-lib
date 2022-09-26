@@ -55,8 +55,6 @@ dotenv.config();
 
 const apiKey = process.env['WG_API_KEY']
 const api = new wgApi(apiKey)
-//Я надто лінивий та не зробив перевірку на undefined тому... 
-//Бережіть себе 
 ...
 ```
 

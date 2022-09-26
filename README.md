@@ -36,7 +36,7 @@ const api = new wgApi('Put your WG key here')
 
 Best practice is to use environment variables or `.env` file to store api keys
 
-`.env` file:
+File `.env`:
 
 ```js
 ...
@@ -55,7 +55,6 @@ dotenv.config();
 
 const apiKey = process.env['WG_API_KEY']
 const api = new wgApi(apiKey)
-//I'm too lazy to make check fo undef, so... be careful 
 ...
 ```
 
