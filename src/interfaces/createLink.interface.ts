@@ -1,5 +1,5 @@
 export interface CreateLinkInterface {
-  region: 'eu' | 'ru' | 'na' | 'asia'
+  region: 'eu' | 'na' | 'asia'
   type: 'player-search' | 'player-data' | 'player-achievement',
   game: 'wotblitz' | 'worldoftanks'
 }

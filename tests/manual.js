@@ -58,19 +58,19 @@ const dummy = (id) => {
       id: 594863503,
       region: 'eu'
     }).then(res => {
-      res['status'] === 'ok' ? resolve(`${id} Success`) : resolve(`${id} Fail`)
+      res['status'] === 'ok' ? resolve(`${++id} Success`) : resolve(`${++id} Fail`)
     })
   })
 }
 const bulk = []
 
-const amountOfCalls = 50
+const amountOfCalls = 51
 
 for (let i = 0; i < amountOfCalls; i++) {
   bulk.push(dummy(i))
 }
 console.log(`Начинаем звонить в WraGAYming ${amountOfCalls} раз`);
-console.time(`Обзвон ${amountOfCalls} раз за:`)
+console.time(`Обзвон ${amountOfCalls} раз за`)
 
 Promise.all(bulk).then(res => {
   console.log(res);
