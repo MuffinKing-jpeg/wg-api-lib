@@ -67,7 +67,7 @@ const api = new wgApi(apiKey)
 | Параметры|              Типы данных        |        Значение        |
 |--------- |-------------------------------- |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| region:  | 'eu' \|         'na' \| 'asia'  | Выбор региона          |
 | query:   |             string              | Ник игрока             |
 
 #### .getPlayerData(paramsObject)
@@ -77,7 +77,7 @@ const api = new wgApi(apiKey)
 | Параметры|              Типы данных        |        Значение        |
 |--------- |-------------------------------- |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| region:  | 'eu' \|         'na' \| 'asia'  | Выбор региона          |
 | id:      |             number              | Id игрока              |
 
 #### .getPlayerAchievements(paramsObject)
@@ -87,7 +87,7 @@ const api = new wgApi(apiKey)
 | Параметры|              Типы данных        |        Значение        |
 |--------- |-------------------------------- |----------------------- |
 | game:    | 'wotb' \| 'worldoftanks'        | Выбор игры             |
-| region:  | 'eu' \| 'ru' \| 'na' \| 'asia'  | Выбор региона          |
+| region:  | 'eu' \|       | 'na' \| 'asia'  | Выбор региона          |
 | id:      |             number              | Id игрока               |
 
 ### Примеры
